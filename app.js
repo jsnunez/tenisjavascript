@@ -1,8 +1,6 @@
 const operacionAritmetica = function () {
     const operando1 = parseFloat(document.getElementById("operando1").value);
     const operando2 = parseFloat(document.getElementById("operando2").value);
-    const operador = document.getElementById("operador").value;
-
     let resultado = 0;
 
     if (operando1 >= 6) {
@@ -21,15 +19,30 @@ const operacionAritmetica = function () {
         }
     }
 
-    if (operando1 < 6 || operando2 < 6) {
+    if (operando1 == 5 & operando2 <= 6) {
         document.getElementById("resultado").innerHTML = "Resultado: el set todavia no termina ";
     }
-    
+    if (operando1 < 5 & operando2 < 5) {
+        document.getElementById("resultado").innerHTML = "Resultado: el set todavia no termina ";
+    }
+    if (operando1 <= 6 & operando2 == 5) {
+        document.getElementById("resultado").innerHTML = "Resultado: el set todavia no termina ";
+    }
 
+    if (operando1 >7) {
+        document.getElementById("resultado").innerHTML = "Resultado: El resultado es inválido";
+        }
 
+    if (operando2 >7) {
+        document.getElementById("resultado").innerHTML = "Resultado: El resultado es inválido";
+        }
 
+    if (operando1 == 7 & operando2<5) {
+        document.getElementById("resultado").innerHTML = "Resultado: El resultado es inválido";
+            }
 
-
-
+    if (operando2 == 7 & operando1<5) {
+        document.getElementById("resultado").innerHTML = "Resultado: El resultado es inválido";
+                }
 
 }
